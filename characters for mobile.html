@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <title>Genshin Impact</title>
+    <link rel="stylesheet" href="charstyle.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function load() {
+            //$("#characterimg").css('opacity','0');
+            //    $("#characterpage,#characterpage1").animate({opacity:0.5},500);
+            $("#characterimg,#amber,#barbara,#tartaglia,#zhon,#diluc,.butt,#fishl").animate({ opacity: 1 }, 300);
+            $("#amber1,#barbara1,#tartaglia1,#zhon1,#diluc1,#fishl1").animate({ opacity: 0.7 }, 300);
+        }
+        var audioElement = document.createElement("audio");
+        audioElement.volume = 0;
+        var soundtrack = document.createElement("audio");
+        var video = document.getElementById("video");
+        var pol = 1;
+        var str;
+        var x;
+        var e;
+        var mus = 0;
+        var now = "amber";
+
+        soundtrack.src = "turn.mp3";
+        soundtrack.loop = "true";
+        soundtrack.volume = 0;
+        function play11(elem) {
+            video = elem;
+            mus++;
+            if (mus % 2 == 1) {
+                elem.play();
+            }
+            else {
+                elem.pause();
+            }
+
+            console.log(elem);
+        }
+        function musicbody(elem) {
+            if (elem != video && mus == 0) {
+                console.log("vbd");
+                mus++;
+                document.getElementById("video").play();
+            }
+
+        }
+        function napravo() {
+            document.getElementById("pravo").style.zIndex = 0;
+            setTimeout(() => {
+                document.getElementById("pravo").style.zIndex = 2;
+            }, 300);
+            switch (pol) {
+                case 1:
+                    $("#characterpage1").animate({ left: "16.25vw" }, 300);
+                    $("#amber,#amber1,#amber2").animate({ opacity: 0 }, 150);
+                    $("#jean").animate({ opacity: 1 }, 150);
+                    $("#jean1").animate({ opacity: 0.7 }, 150); $("#jean1").css('filter', 'invert(0)');
+                    if (now == "jean") { $("#jean2").animate({ opacity: 1 }, 150); $("#jean1").css('filter', 'invert(1)'); }
+                    setTimeout(function () {
+                        $("#barbara,#barbara1,#barbara2").animate({ opacity: 0 }, 150);
+                        $("#kecin").animate({ opacity: 1 }, 150);
+                        $("#kecin1").animate({ opacity: 0.7 }, 150); $("#kecin1").css('filter', 'invert(0)');
+                        if (now == "kecin") { $("#kecin2").animate({ opacity: 1 }, 150); $("#kecin1").css('filter', 'invert(1)'); }
+                    }, 150); pol = pol + 2;
+                    break;
+                case 3:
+                    $("#characterpage1").animate({ left: "2.5vw" }, 300);//-13.75vw
+                    $("#tartaglia,#tartaglia1,#tartaglia2").animate({ opacity: 0 }, 150);
+                    $("#keya").animate({ opacity: 1 }, 150);
+                    $("#keya1").animate({ opacity: 0.7 }, 150); $("#keya1").css('filter', 'invert(0)');
+                    if (now == "keya") { $("#keya2").animate({ opacity: 1 }, 150); $("#keya1").css('filter', 'invert(1)'); }
+                    setTimeout(function () {
+                        $("#zhon,#zhon1,#zhon2").animate({ opacity: 0 }, 150);
+                        $("#kli").animate({ opacity: 1 }, 150);
+                        $("#kli1").animate({ opacity: 0.7 }, 150); $("#kli1").css('filter', 'invert(0)');
+                        if (now == "kli") { $("#kli2").animate({ opacity: 1 }, 150); $("#kli1").css('filter', 'invert(1)'); }
+
+                    }, 150); pol = pol + 2;
+                    break;
+                case 5:
+                    $("#characterpage1").animate({ left: "-11.25vw" }, 300);//-264
+
+                    $("#diluc,#diluc1,#diluc2").animate({ opacity: 0 }, 150);
+                    $("#cici").animate({ opacity: 1 }, 150);
+                    $("#cici1").animate({ opacity: 0.7 }, 150); $("#cici1").css('filter', 'invert(0)');
+                    if (now == "cici") { $("#cici2").animate({ opacity: 1 }, 150); $("#cici1").css('filter', 'invert(1)'); }
+                    setTimeout(function () {
+                        $("#fishl,#fishl1,#fishl2").animate({ opacity: 0 }, 150);
+                        $("#sin").animate({ opacity: 1 }, 150);
+                        $("#sin1").animate({ opacity: 0.7 }, 150); $("#sin1").css('filter', 'invert(0)');
+                        if (now == "sin") { $("#sin2").animate({ opacity: 1 }, 150); $("#sin1").css('filter', 'invert(1)'); }
+                    }, 150); pol = pol + 2;
+                    break;
+                case 7:
+                    $("#characterpage1").animate({ left: "-25vw" }, 300);//-264
+
+                    $("#jean,#jean1,#jean2").animate({ opacity: 0 }, 150);
+                    $("#xian").animate({ opacity: 1 }, 150);
+                    $("#xian1").animate({ opacity: 0.7 }, 150); $("#xian1").css('filter', 'invert(0)');
+                    if (now == "xian") { $("#xian2").animate({ opacity: 1 }, 150); $("#xian1").css('filter', 'invert(1)'); }
+                    setTimeout(function () {
+                        $("#kecin,#kecin1,#kecin2").animate({ opacity: 0 }, 150);
+                        $("#venti").animate({ opacity: 1 }, 150);
+                        $("#venti1").animate({ opacity: 0.7 }, 150); $("#venti1").css('filter', 'invert(0)');
+                        if (now == "venti") { $("#venti2").animate({ opacity: 1 }, 150); $("#venti1").css('filter', 'invert(1)'); }
+                    }, 150); pol = pol + 2;
+                    break;
+
+            }
+        }
+        function nalevo() {
+            document.getElementById("levo").style.zIndex = 0;
+            setTimeout(() => {
+                document.getElementById("levo").style.zIndex = 2;
+            }, 300);
+            switch (pol) {
+                case 3:
+                    $("#characterpage1").animate({ left: "30vw" }, 300);
+                    $("#barbara").animate({ opacity: 1 }, 150);
+                    $("#barbara1").animate({ opacity: 0.7 }, 150); $("#barbara1").css('filter', 'invert(0)');
+                    if (now == "barbara") { $("#barbara2").animate({ opacity: 1 }, 150); $("#barbara1").css('filter', 'invert(1)'); }
+                    $("#kecin,#kecin1,#kecin2").animate({ opacity: 0 }, 150);
+                    setTimeout(function () {
+                        $("#amber").animate({ opacity: 1 }, 150);
+                        $("#amber1").animate({ opacity: 0.7 }, 150); $("#amber1").css('filter', 'invert(0)');
+                        if (now == "amber") { $("#amber2").animate({ opacity: 1 }, 150); $("#amber1").css('filter', 'invert(1)'); }
+                        $("#jean,#jean1,#jean2").animate({ opacity: 0 }, 150);
+                    }, 150); pol = pol - 2;
+                    break;
+                case 5:
+                    $("#characterpage1").animate({ left: "16.25vw" }, 300);//-264
+                    $("#zhon").animate({ opacity: 1 }, 150);
+                    $("#zhon1").animate({ opacity: 0.7 }, 150); $("#zhon1").css('filter', 'invert(0)');
+                    if (now == "zhon") { $("#zhon2").animate({ opacity: 1 }, 150); $("#zhon1").css('filter', 'invert(1)'); } z
+                    $("#kli,#kli1,#kli2").animate({ opacity: 0 }, 150);
+                    setTimeout(function () {
+                        $("#tartaglia").animate({ opacity: 1 }, 150);
+                        $("#tartaglia1").animate({ opacity: 0.7 }, 150); $("#tartaglia1").css('filter', 'invert(0)');
+                        if (now == "tartaglia") { $("#tartaglia2").animate({ opacity: 1 }, 150); $("#tartaglia1").css('filter', 'invert(1)'); }
+                        $("#keya,#keya1,#keya2").animate({ opacity: 0 }, 150);
+                    }, 150);
+                    pol = pol - 2;
+                    break;
+                case 7:
+                    $("#characterpage1").animate({ left: "2.5vw" }, 300);
+                    $("#fishl").animate({ opacity: 1 }, 150);
+                    $("#fishl1").animate({ opacity: 0.7 }, 150); $("#fishl1").css('filter', 'invert(0)');
+                    if (now == "fishl") { $("#fishl2").animate({ opacity: 1 }, 150); $("#fishl1").css('filter', 'invert(1)'); }
+                    $("#sin,#sin1,#sin2").animate({ opacity: 0 }, 150);
+                    setTimeout(function () {
+                        $("#diluc").animate({ opacity: 1 }, 150);
+                        $("#diluc1").animate({ opacity: 0.7 }, 150); $("#diluc1").css('filter', 'invert(0)');
+                        if (now == "diluc") { $("#diluc2").animate({ opacity: 1 }, 150); $("#diluc1").css('filter', 'invert(1)'); }
+                        $("#cici,#cici1,#cici2").animate({ opacity: 0 }, 150);
+                    }, 150);
+                    pol = pol - 2;
+                    break;
+                case 9:
+                    $("#characterpage1").animate({ left: "-11.25vw" }, 300);
+                    $("#kecin").animate({ opacity: 1 }, 150);
+                    $("#kecin1").animate({ opacity: 0.7 }, 150); $("#kecin1").css('filter', 'invert(0)');
+                    if (now == "kecin") { $("#kecin2").animate({ opacity: 1 }, 150); $("#kecin1").css('filter', 'invert(1)'); }
+                    $("#venti,#venti1,#venti2").animate({ opacity: 0 }, 150);
+                    setTimeout(function () {
+                        $("#jean").animate({ opacity: 1 }, 150);
+                        $("#jean1").animate({ opacity: 0.7 }, 150); $("#jean1").css('filter', 'invert(0)');
+                        if (now == "jean") { $("#jean2").animate({ opacity: 1 }, 150); $("#jean1").css('filter', 'invert(1)'); }
+                        $("#xian,#xian1,#xian2").animate({ opacity: 0 }, 150);
+                    }, 150);
+                    pol = pol - 2;
+                    break;
+            }
+        }
+        function music(a) {
+            mus++;
+            switch ($(a).attr("src")) {
+                case "musicoff.png":
+                    document.getElementById("music").src = "musicon.png";
+                    soundtrack.play(); break;
+                case "musicon.png":
+                    document.getElementById("music").src = "musicoff.png";
+                    soundtrack.pause(); break;
+            }
+        }
+        function op1(element) {
+            str = $(element).attr("id");
+            if (($(element).css('opacity')) >= 0.5 && ($("#" + str + 2).css('opacity') <= 0.5)) {
+                $(element).animate({ opacity: 1 }, 0);
+                $("#" + str + 1).animate({ opacity: 0.7 }, 150);
+                $("#" + str + 2).animate({ opacity: 1 }, 150);
+                $("#" + str + 1).css('filter', 'invert(1)');
+                console.log("str " + str);
+
+            }
+
+
+        }
+        function op0(element) {
+            if (($(element).css('opacity')) == 1 && now != str) {
+                $(element).animate({ opacity: 1 }, 0);
+                $("#" + str + 1).animate({ opacity: 0.7 }, 150);
+                $("#" + str + 2).animate({ opacity: 0 }, 0);
+                $("#" + str + 1).css('filter', 'invert(0)');
+            }
+        }
+        function img(element) {
+            //now=большая картинка str=наводка (айди)
+            console.log("now " + now);
+            if (str != now && $("#" + str).css('opacity') == 1) {
+                if ($("#" + now).css('opacity') == 1) {
+                    $("#" + now).animate({ opacity: 1 }, 0);
+                    $("#" + now + 1).animate({ opacity: 0.7 }, 0);
+                }
+                else {
+                    $("#" + now).animate({ opacity: 0 }, 0);
+                    $("#" + now + 1).animate({ opacity: 0 }, 0);
+                }
+
+                $("#" + now + 2).animate({ opacity: 0 }, 150);
+                $("#" + now + 1).css('filter', 'invert(0)');
+
+            }
+
+            if (($("#characterimg").css('opacity')) == 1 && str != now && $("#" + str + 2).css('opacity') == 1) {
+                now = $(element).attr("id");
+                $("#characterimg").animate({ opacity: 0 }, 250);
+                setTimeout(function () { document.getElementById("img").src = "imgs/" + $(element).attr("id") + ".png";; }, 250);
+                switch ($(element).attr("id")) {
+                    case "amber":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Эмбер</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Наивная и задорная девушка, скаут Ордо Фавониус.<br>Благодаря отличному владению планером она стала трёхкратным чемпионом Мондштадта по полётам.<br>Будучи восходящей звездой Ордо Фавониус, Эмбер всегда готова к задачам любой сложности.";
+                            ;
+                        }, 250);
+                        $("#characterimg").animate({ opacity: 1 }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/de7ca956c37351bfc17264b731e99c2d_1097149209091679500.mp3";
+                        break;
+                    case "barbara":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Барбара</i>";; }, 250);
+                        setTimeout(function () { document.getElementById("opisanie").innerHTML = "Пастор Ордо Фавониус, а также сияющая звёздочка, любимая всеми в Мондштадте.<br>Жители Мондштадта больше привыкли к бардам, нежели к звёздочкам, но они всё равно без ума от Барбары.<br>\"Я в долгу перед духом свободы этого города.\" — Барбара, о своей популярности.";; }, 250);
+
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/e617563c2e324feb7dadd82cc851fab0_463266562808078241.mp3";
+                        break;
+                    case "tartaglia":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Тарталья</i>";; }, 250);
+                        setTimeout(function () { document.getElementById("opisanie").innerHTML = "Познакомьтесь с Тартальей, непредсказуемым воином из Снежной!<br>Не питайте иллюзий, что вы понимаете его подлинные намерения. Не забывайте, что за этой невинной внешностью скрывается безжалостное орудие для убийства.";; }, 250);
+
+                        audioElement.src = "audio/tartaglia.mp3";
+                        break;
+                    case "zhon":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Чжун Ли</i>";; }, 250);
+                        setTimeout(function () { document.getElementById("opisanie").innerHTML = "Загадочный консультант ритуального бюро «Ваншэн». Красив, обладает изящными манерами и выдающимся интеллектом.<br>Происхождение Чжун Ли неизвестно, но он отлично знаком с правилами этикета и хорошими манерами. В ритуальном бюро «Ваншэн» он занимается проведением церемоний любого рода.";; }, 250);
+
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/06/02/602d5d7cbc2e93130a18188b4af7a51d_4081218662440864466.mp3";
+                        break;
+                    case "diluc":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Дилюк</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Будучи самым богатым холостяком Мондштадта, Дилюк всегда показывает себя только с самой благородной стороны.<br>Однако, под этой маской скрывается воин с закалённой в пламени железной волей, который не остановится ни перед чем ради защиты Мондштадта. Не стоит надеяться на пощаду, он будет безжалостен до самого конца.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/0b3f5c459ba2f47c1929edc03ae8cf62_724904933380861304.mp3";
+                        break;
+                    case "fishl":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Фишль</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Таинственная девушка, называющая себя «Принцессой Осуждения». Она путешествует в сопровождении ворона по имени Оз.<br>В текущий момент является агентом гильдии искателей приключений.<br>Благодаря своим уникальным способностям, эксцентричному характеру и (сама она этого не признаёт) трудолюбию, Фишль стала восходящей звездой гильдии, заслужив всеобщее признание.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/8853c35c52f96aaee7f3a175df6f9379_3006613865090026125.mp3";
+                        break;
+                    case "jean":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Диона</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Невероятно популярный бармен таверны «Кошкин хвост», восходящая звезда винной индустрии Мондштадта и величайший бунтарь против традиционных устоев.<br>Обладательница кошачьего хвоста и милых ушек родилась в Спрингвейле. Любой коктейль, который она готовит собственноручно, выходит божественно вкусным.<br>Но, учитывая отвращение Дионы к алкоголю, талант её - благословение или проклятие?";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/c5242a1f8cffb2b8bff252c3aa75ec57_8098181919801526396.mp3";
+                        break;
+                    case "keya":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Кэйа</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "В Ордо Фавониус Кэйа является доверенным помощником действующего командира Джинн. Он может справиться с любой неразрешимой, на первый взгляд, проблемой.<br>Все в Мондштадте любят Кэйю, но никто не знает, в чём секрет этого остроумного и очаровательного рыцаря...";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/d3305cf22dcc273aba459d6242a97ebc_1280818530048180876.mp3";
+                        break;
+                    case "kli":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Кли</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Рыцарь Искорка из Ордо Фавониус! Повсюду за ней следуют вспышки и взрывы!<br>Но весь огонь затухает, как только появляется Джинн.<br>Одиночное заключение даёт время подумать над новыми формулами пороха...<br>Но всё равно свобода – лучше!";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/56f47c1911763bf96ba3d1a07bf932f0_3095375205783134078.mp3";
+                        break;
+                    case "cici":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Ци Ци</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Ученица и сборщица трав из хижины Бубу.<br>Случайно оказавшись в сражении между Адептами и демонами, обрела бессмертное тело. Перед тем, как что-нибудь сделать, должна сама себе отдать приказ.<br>С памятью у Ци Ци беда. Чтобы она не помешала нормальному ходу жизни, Ци Ци постоянно носит с собой блокнот, в котором ведёт записи на все случаи жизни.<br>Но в самые неудачные дни она забывает заглянуть даже в свои записи...";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/09/03/b56b6156b5b8431925d12e9ee2336c93_5211759970704517435.mp3";
+                        break;
+                    case "sin":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Синь Янь</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "В гавани Ли Юэ зарождается новое искусство, и Синь Янь - исполнитель, сражающийся в первых рядах на этом фронте.<br>С помощью музыки и пылких песен она борется с предвзятостью и жаждет разбудить погрязшие в рутине души этого мира.<br>Если у вас будет возможность посетить её концерт, ни в коем случае не упускайте его.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/edc259fcd9ac0eec02449b177f0efa83_742220818210592527.mp3";
+                        break;
+                    case "venti":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Венти</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Неведомые ветра привели барда в наши земли. Порой его песни стары как свет, а иной раз он играет современные произведения.<br>Любит яблоки и живую атмосферу, не любит сыры и всё липкое.<br>Когда он управляет ветрами, его Анемо сила проявляется в виде перьев. Венти привлекает их лёгкость и беспечность.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/10/21/4fe1884d7d4d076227bd68b3103de58c_85209273097485643.mp3";
+                        break;
+                    case "xian":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Сян Лин</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Новый шеф-повар ресторана «Вань Минь». Если её нет у печи, значит она разносит блюда в главном зале. Лучше всего её мастерство проявляется в острых закусках.<br>Несмотря на юный возраст, Сян Лин уже стала мастером поваром, а её кулинарные шедевры высоко ценятся жителями горы Тигра.<br>Если вам повезёт и Сян Лин пригласит вас посетить её ресторан, идите не сомневаясь. Удовольствие для вашего желудка гарантировано.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/03/16/279e6904dab29ea94f39f6372e7f7f1c_1227466694553291426.mp3";
+                        break;
+                    case "kecin":
+                        setTimeout(function () { document.getElementById("name").innerHTML = "<i>Кэ Цин</i>";; }, 250);
+                        setTimeout(function () {
+                            document.getElementById("opisanie").innerHTML = "Юй Хэн группировки Цисин в Ли Юэ. У неё есть что сказать против «Властелина Камня, правящего Ли Юэ лишь словом», но, оказывается, боги любят таких скептиков, как она.<br>Она твёрдо верит: судьбу человечества должно вершить само человечество, ведь человек лучше знает, что нужно его роду. Чтобы доказать это, она работает так усердно, как никто другой.";
+                            ;
+                        }, 250);
+                        audioElement.src = "https://webstatic.mihoyo.com/upload/op-public/2020/09/03/e1655f638178aec46c364dad17419f9b_9139256563873723956.mp3";
+                        break;
+                }
+                document.getElementById("video").src = "videos/" + $(element).attr("id") + ".mp4";
+                // video.play();
+                if (mus % 2 == 1) {
+                    document.getElementById("video").play();
+                }
+                audioElement.play();
+                $("#characterimg").animate({ opacity: 1 }, 250);
+
+                // default:
+                // document.getElementById("img").src="imgs/barbara.png";
+                // break;
+
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body onload="load()" onclick="musicbody(this)">
+    <div class="buttons"><img id="music" src="musicoff.png" onclick="music(this)"></div>
+    <a href="main.html">
+        <div class="main">
+            <p>Главная</p>
+        </div>
+    </a>
+    <a href="locations.html">
+        <div class="fractions">
+            <p>Фракции</p>
+        </div>
+    </a>
+    <a href="characters for mobile.html">
+        <div class="chars">
+            <p>Персонажи</p>
+        </div>
+    </a>
+    <img id="back" src="location.png">
+    <!-- src="location.png" -->
+
+
+    <div id="characterimg">
+        <img id="img" src="imgs/amber.png">
+        <p id="name"><i>Эмбер</i></p>
+        <div class="scrollbar" id="style-1">
+            <div class="force-overflow">
+                <p id="opisanie">Наивная и задорная девушка, скаут Ордо Фавониус.<br>
+                    Благодаря отличному владению планером она стала трёхкратным чемпионом Мондштадта по полётам.<br>
+                    Будучи восходящей звездой Ордо Фавониус, Эмбер всегда готова к задачам любой сложности.</p>
+            </div>
+
+        </div>
+        <video id="video" id="vid" src="videos/amber.mp4" onclick="play11(this)"></video>
+    </div>
+
+    <div id="characterpage">
+        <img src="levo.png" id="levo" onclick="nalevo()">
+        <img src="pravo.png" id="pravo" onclick="napravo()">
+        <div id="characterpage1">
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:0px;" id="ss">
+                <div class="fon" id="amber1">
+                    <div class="fon1" id="amber3"></div>
+                    <p class="aniname">Эмбер</p>
+                </div><img src="elements/fire.png" class="element" id="amber2"><img src="icons/amber.png" id="amber"
+                    class="charactericon" onmouseover="op1(this) " onmouseout="op0(this)" onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:6.875vw;" id="qwer">
+                <div class="fon" id="barbara1">
+                    <div class="fon1" id="barbara3"></div>
+                    <p class="aniname">Барбара</p>
+                </div><img src="elements/water.png" class="element" id="barbara2"><img src="icons/barbara.png"
+                    class="charactericon" id="barbara" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style="width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:13.75vw;">
+                <div class="fon" id="tartaglia1">
+                    <div class="fon1" id="tartaglia3"></div>
+                    <p class="aniname">Тарталья</p>
+                </div><img src="elements/water.png" class="element" id="tartaglia2"><img src="icons/tartaglia.png"
+                    class="charactericon" id="tartaglia" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:calc(6.875vw*3);">
+                <div class="fon" id="zhon1">
+                    <div class="fon1" id="zhon3"></div>
+                    <p class="aniname" style="left: 0px;">Чжун Ли</p>
+                </div><img src="elements/geo.png" class="element" id="zhon2"><img src="icons/zhon.png"
+                    class="charactericon" id="zhon" onmouseover="op1(this) " onmouseout="op0(this)" onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:calc(6.875vw*4);">
+                <div class="fon" id="diluc1">
+                    <div class="fon1" id="diluc3"></div>
+                    <p class="aniname" style="left: 21px;">Дилюк</p>
+                </div><img src="elements/fire.png" class="element" id="diluc2"><img src="icons/diluc.png"
+                    class="charactericon" id="diluc" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:calc(6.875vw*5);">
+                <div class="fon" id="fishl1">
+                    <div class="fon1" id="fishl3"></div>
+                    <p class="aniname" style="left: 21px;">Фишль</p>
+                </div><img src="elements/electro.png" class="element" id="fishl2"><img src="icons/fishl.png"
+                    class="charactericon" id="fishl" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:calc(6.875vw*6);">
+                <div class="fon" id="jean1" style="opacity: 0;">
+                    <div class="fon1" id="jean3"></div>
+                    <p class="aniname" style="left: 21px;">Диона</p>
+                </div><img src="elements/cryo.png" class="element" id="jean2"><img
+                    src="https://uploadstatic-sea.mihoyo.com/contentweb/20201106/2020110619410190170.png"
+                    style="opacity: 0;" class="charactericon" id="jean" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 6.2vw; height: 7.4vw; position: absolute;top: 0;left:calc(6.875vw*7);">
+                <div class="fon" id="kecin1" style="opacity: 0;">
+                    <div class="fon1" id="kecin3"></div>
+                    <p class="aniname" style="left: 21px;">Кэ Цин</p>
+                </div><img src="elements/electro.png" class="element" id="kecin2"><img src="icons/kecin.png"
+                    class="charactericon" id="kecin" style=" opacity: 0;" onmouseover="op1(this) "
+                    onmouseout="op0(this)" onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*8);">
+                <div class="fon" id="keya1" style="opacity: 0;">
+                    <div class="fon1" id="keya3"></div>
+                    <p class="aniname" style="left: 31px;">Кэйа</p>
+                </div><img src="elements/cryo.png" class="element" id="keya2"><img src="icons/keya.png"
+                    class="charactericon" id="keya" style=" opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*9);">
+                <div class="fon" id="kli1" style="opacity: 0;">
+                    <div class="fon1" id="kli3"></div>
+                    <p class="aniname" style="left: 35px;">Кли</p>
+                </div><img src="elements/fire.png" class="element" id="kli2"><img src="icons/kli.png"
+                    class="charactericon" id="kli" style="opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*10);">
+                <div class="fon" id="cici1" style="opacity: 0;">
+                    <div class="fon1" id="cici3"></div>
+                    <p class="aniname">Ци Ци</p>
+                </div><img src="elements/cryo.png" class="element" id="cici2"><img
+                    src="https://uploadstatic-sea.mihoyo.com/contentweb/20200903/2020090317575919527.png"
+                    class="charactericon" id="cici" style="opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*11);">
+                <div class="fon" id="sin1" style="opacity: 0;">
+                    <div class="fon1" id="sin3"></div>
+                    <p class="aniname">Синь Янь</p>
+                </div><img src="elements/fire.png" class="element" id="sin2"><img
+                    src="https://uploadstatic-sea.mihoyo.com/contentweb/20201125/2020112516543172557.png"
+                    class="charactericon" id="sin" style=" opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*12);">
+                <div class="fon" id="xian1" style="opacity: 0;">
+                    <div class="fon1" id="xian3"></div>
+                    <p class="aniname">Сян Лин</p>
+                </div><img src="elements/fire.png" class="element" id="xian2"><img src="icons/xian.png"
+                    class="charactericon" id="xian" style="opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+            <div style=" width: 106px; height: 106px; position:absolute;top: 0;left:calc(6.875vw*13);">
+                <div class="fon" id="venti1" style="opacity: 0;">
+                    <div class="fon1" id="venti3"></div>
+                    <p class="aniname">Венти</p>
+                </div><img src="elements/anemo.png" class="element" id="venti2"><img src="icons/venti.png"
+                    class="charactericon" id="venti" style="opacity: 0;" onmouseover="op1(this) " onmouseout="op0(this)"
+                    onclick="img(this)">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+@font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.forbut{
+    top: 26vw;
+    width: 9.375vw;
+    height: 4.17vw;
+    outline: none;
+    transition: .5s;
+    font-size: 1.25vw;
+    border-radius: 0.26vw;
+    z-index: 5;
+}
+#monbut {
+    position: absolute;
+    left: 17.71vw;
+    background: rgba(0, 168, 0, 0.3);
+    .forbut;
+}
+#libut {
+    position: fixed;
+    right: 21.875vw;
+    background: rgba(203, 224, 13, 0.3);
+    .forbut;
+}
+.forp{
+    top: 15.625vw;
+    font-family: @font;
+    color: fade(white, 100%);
+    font-size: 4.17vw;
+    font-weight: bold;
+    text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+//mixin
+#mainmond {
+    position: fixed;
+    left: 12.5vw;
+    .forp;
+
+}
+
+#mainli {
+    position: fixed;
+    right: 12.5vw;
+    .forp;
+}
+.main{
+    position: absolute;
+    width: 8vw;
+    height: 4vw;
+    left: 12vw;
+    z-index: 4;
+    font-weight: bold;
+    color: white;
+    p{
+        position: absolute;
+        font-size: 2vw;
+        bottom: -1vw;
+        .text
+    }
+}
+.fractions {
+    position: absolute;
+    width: 8vw;
+    height: 4vw;
+    left: 21vw;
+    z-index: 4;
+    font-weight: bold;
+    color: white;
+    // font-size: 40px;
+    p{
+        position: absolute;
+        font-size: 2vw;
+        bottom: -1vw;
+        .text
+    }
+}
+.chars {
+    position: absolute;
+    width: 8vw;
+    height: 4vw;
+    left: 31vw;
+    z-index: 4;
+    // top: 3vw;
+    // top: -30px;
+    font-weight: bold;
+    color: white;
+    // font-size: 40px;
+    p{
+        position: absolute;
+        font-size: 2vw;
+        bottom: -1vw;
+        .text
+    }
+}
