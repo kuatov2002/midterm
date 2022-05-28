@@ -1,0 +1,116 @@
+.text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.forbut {
+  top: 26vw;
+  width: 9.375vw;
+  height: 4.17vw;
+  outline: none;
+  transition: 0.5s;
+  font-size: 1.25vw;
+  border-radius: 0.26vw;
+  z-index: 5;
+}
+#monbut {
+  position: absolute;
+  left: 17.71vw;
+  background: rgba(0, 168, 0, 0.3);
+  top: 26vw;
+  width: 9.375vw;
+  height: 4.17vw;
+  outline: none;
+  transition: 0.5s;
+  font-size: 1.25vw;
+  border-radius: 0.26vw;
+  z-index: 5;
+}
+#libut {
+  position: fixed;
+  right: 21.875vw;
+  background: rgba(203, 224, 13, 0.3);
+  top: 26vw;
+  width: 9.375vw;
+  height: 4.17vw;
+  outline: none;
+  transition: 0.5s;
+  font-size: 1.25vw;
+  border-radius: 0.26vw;
+  z-index: 5;
+}
+.forp {
+  top: 15.625vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+  font-size: 4.17vw;
+  font-weight: bold;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+#mainmond {
+  position: fixed;
+  left: 12.5vw;
+  top: 15.625vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+  font-size: 4.17vw;
+  font-weight: bold;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+#mainli {
+  position: fixed;
+  right: 12.5vw;
+  top: 15.625vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+  font-size: 4.17vw;
+  font-weight: bold;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.main {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 12vw;
+  z-index: 4;
+  font-weight: bold;
+  color: white;
+}
+.main p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.fractions {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 21vw;
+  z-index: 4;
+  font-weight: bold;
+  color: white;
+}
+.fractions p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.chars {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 31vw;
+  z-index: 4;
+  font-weight: bold;
+  color: white;
+}
+.chars p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}

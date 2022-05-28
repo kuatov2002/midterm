@@ -1,0 +1,276 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Genshin Impact</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #product{
+            width: 25.78125vw;
+            height: 38vw;
+            /* background: linear-gradient(to bottom,#272e3b,#1c2534); */
+            box-shadow: 0 0.3125vw 1.25vw rgba(0,0,0,.3);
+            border-top: 0.1vw solid rgba(255,255,255,.15);
+            position: absolute;
+            right: 9.9vw;
+            top: 13vw;
+        }
+        #product img{
+            position: absolute;
+            width: 25.78125vw;
+            right: 0px;
+            top: 9.63vw;
+        }
+        #prod1{
+            width: 25.78125vw;
+            height: 5.2vw;
+            background: linear-gradient(to bottom,rgba(51, 66, 94, 0.9),rgba(43, 63, 97, 0.9));
+        }
+        #prod1 img{
+            height: 3.4375vw;
+            width: 18.85vw;
+            position: absolute;
+            left: -3.64vw;
+            top: 0.78125vw;
+        }
+        #prod1 p{
+            position: absolute;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-size: 1.5625vw;
+            left: 11.2vw;
+            top: -0.78125vw;
+        }
+        #prod2 img{
+            height: 3.4375vw;
+            width: 18.85vw;
+            position: absolute;
+            left: -3.64vw;
+            top: 0.78125vw;
+        }
+        #prod2 p{
+            position: absolute;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-size: 1.5625vw;
+            left: 11.2vw;
+            top: -0.78125vw;
+        }
+        #prod2{
+            width: 25.78125vw;
+            height: 5.2vw;
+            background: linear-gradient(to bottom,rgba(39, 46, 59,0.9),rgba(28, 37, 52,0.9));
+            position: absolute;
+            top: 5.2vw;
+        }
+        #prod3{
+            width: 25.78125vw;
+            height: 27.6vw;
+            background: linear-gradient(to bottom,rgba(39, 46, 59,0.9),rgba(28, 37, 52,0.9));
+            position: absolute;
+            top: 10.41vw;
+        }
+        #prod3 img{
+            position: absolute;
+            top: 0;
+        }
+        #skr{
+            width: 25.78125vw;
+            height: 10.41vw;
+            position: absolute;
+            right: 19.89vw;
+            top: 13vw;
+            z-index: -1;
+        }
+        #monbut {
+            position: absolute;
+            left: 8.203125vw;
+            top: 14.58vw;
+            background: linear-gradient(to bottom,rgba(39, 46, 59,0.9),rgba(28, 37, 52,0.9));
+            width: 9.375vw;
+            height: 4.16vw;
+            outline: none;
+            transition: 0.5s;
+            font-size: 1.25vw;
+            border-radius: 0.26vw;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+        }
+        #pod{
+            opacity: 0;
+            position: absolute;
+            color: white;
+            top: 17.1875vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 1.5625vw;
+            text-align: center;
+        }
+        #yes,#no{
+            position: absolute;
+            opacity: 0;
+            top: 22.92vw;
+            background: linear-gradient(to bottom,rgba(39, 46, 59,0.9),rgba(28, 37, 52,0.9));
+            width: 9.375vw;
+            height: 4.17vw;
+            outline: none;
+            transition: 0.5s;
+            font-size: 1.25vw;
+            border-radius: 0.26vw;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+        }
+        #yes{
+            left: 2.48vw;
+        }
+        #no{
+            left: 13.93vw;
+        }
+        #video11{
+            position: absolute;
+            z-index: 3;
+            top: 13vw;
+            left: 5.2vw;
+            /* width: 400px; */
+            height: 28.65vw;
+        }
+        #ps4{
+            position: absolute;
+            bottom: 0;
+            left: 2.87vw;
+            height: 3.18vw;
+        }
+        #ios{
+            position: absolute;
+            bottom: 0;
+            left: 12.5vw;
+            height: 3.18vw;
+        }
+        #and{
+            position: absolute;
+            bottom: 0;
+            left: 21.875vw;
+            height: 3.18vw;
+        }
+        #platform{
+            position: absolute;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 1.5625vw;
+            color: white;
+            bottom: 2.08vw;
+            left: 5.21vw;
+        }
+    </style><script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        var now="prod1";
+        var cost="2 699₽";
+        var name="Legendary Edition";
+        
+        function want(elem) {
+            // console.log("#"+$(elem).attr("id").slice(0,4)+1+","+"#"+$(elem).attr("id").slice(0,4)+2);
+            $("#"+$(elem).attr("id").slice(0,4)+1+","+"#"+$(elem).attr("id").slice(0,4)+2).css("background","linear-gradient(to bottom,rgba(39, 46, 59,0.9),rgba(28, 37, 52,0.9))");
+            $(elem).css("background","linear-gradient(to bottom,rgba(51, 66, 94, 0.9),rgba(43, 63, 97, 0.9))")
+            $("#skr").css("z-index",1)
+            if($(elem).attr("id")=="prod2"&&now!="prod2"){
+                $("#img").animate({opacity:0},100);
+                setTimeout(() => {
+                document.getElementById("img").src="standard.jpg";
+                $("#img").animate({opacity:1},100);                    
+                }, 100);
+                cost="999₽";
+                name="Standard Edition";
+            }
+            if($(elem).attr("id")=="prod1"&&now!="prod1"){
+                
+                $("#img").animate({opacity:0},100);
+                setTimeout(() => {
+                document.getElementById("img").src="legend.png";
+                $("#img").animate({opacity:1},100);
+                }, 100);
+                cost="2 699₽";
+                name="Legendary Edition";
+            }
+            setTimeout(() => {
+                $("#skr").css("z-index",-1)
+                }, 200);
+                now=$(elem).attr("id");
+            }
+        function pred() {
+            document.getElementById("pod").innerHTML="Вы действительно хотите купить "+name+" за "+cost+"?";
+            $("#skr").css("z-index",1)
+            $("#yes,#no,#pod").css("opacity",1)
+        }
+        function yes() {
+            $("#skr,#pod,#yes,#no").css("opacity",0)
+            $("#skr").css("z-index",-1)
+        }
+        var video11=0;
+        function video() {
+            video11++;
+            if(video11%2==1){
+                document.getElementById("video11").play();
+            }
+            else{
+                document.getElementById("video11").pause();
+            }
+        }
+        var just=0;
+        function videobody(){
+            
+            if (just==0) {
+                video();    
+            }just++;
+
+        }
+    </script>
+</head>
+<body onclick="videobody()">
+
+    <div class="buttons"><img id="music" src="musicoff.png" onclick="music(this)"></div>
+    <a href="main.html"><div class="main" >
+        <p>Главная</p>
+    </div></a>
+    <a href="locations.html"><div class="fractions">
+        <p>Фракции</p>
+    </div></a>
+    <a href="characters for mobile.html"><div class="chars">
+        <p>Персонажи</p>
+    </div></a>  
+    
+    <img id="back" src="location.png">
+    <video src="videos/opening.mp4" id="video11" onclick="video()" loop ></video>
+    <div id="product">
+        <img src="mainicon.png">
+        <div id="prod1" onclick="want(this)">
+            <img src="buy.png">
+            <p>Legendary Edition</p>
+            <p style="top: 0.78125vw;">2 699₽</p>            
+        </div>
+        <div id="prod2" onclick="want(this)">
+            <img src="buy1.png">
+            <p>Standard Edition</p>
+            <p style="top: 0.78125vw;">999₽</p> 
+        </div>
+        <div id="prod3">
+            <img src="legend.png" id="img">
+            <button id="monbut" onclick="pred()">Сделать Предзаказ</button>
+            <p id="pod"></p>
+            <button id="yes" onclick="yes()">Да</button><button id="no" onclick="yes()">Нет</button>
+        </div>
+        
+    </div>
+    <div id="skr"></div>
+    <a href="https://store.playstation.com/ru-ru/product/EP6261-CUSA23678_00-OSRELSIEEGENSHIN"><img id="ps4" src="data:image/png;base64,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"></a>
+    <a href="https://apps.apple.com/app/id1517783697"><img id="ios" src="data:image/png;base64,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"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact"><img id="and" src="data:image/png;base64,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"></a>
+        <p id="platform">Игра так же доступна на этих платформах:</p>
+    <!-- <div id="predzakaz"></div> -->
+
+</body>
+</html>

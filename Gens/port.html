@@ -1,0 +1,265 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.15vw 0.20625vw rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+        body{
+            overflow-x: hidden;
+            background-color: #333;
+        }
+        #one {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #mainfc {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0% 30%;
+        }
+
+        #name {
+            font-size: 200px;
+            color: rgb(255, 187, 100);
+            position: absolute;
+            text-align: left;
+            left: 60%;
+            top: 15%;
+        }
+
+        #developer {
+            font-size: 50px;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            text-align: left;
+            left: 60%;
+            top: 65%;
+        }
+
+        #two {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        #info {
+            position: absolute;
+            box-shadow: 0px 0px 3px black;
+            left: 5%;
+            width: 35%;
+            height: 75%;
+            top: 0;
+            overflow: hidden;
+        }
+
+        #face {
+            width: 100%;
+            height: 70%;
+            object-position: 0% 35%;
+            object-fit: cover;
+        }
+
+        #info p {
+            padding: 20px;
+            font-size: 40px;
+            color: rgb(102, 102, 102);
+        }
+
+        #about {
+            position: absolute;
+            left: 45%;
+            top: 10%;
+            font-size: 100px;
+            color: rgb(255, 187, 100);
+            text-align: left;
+        }
+
+        .about1 {
+            font-size: 30px;
+            position: absolute;
+            left: 45%;
+            text-align: left;
+            top: 25%;
+            color: rgb(102, 102, 102);
+            line-height: 120px;
+        }
+        #three {
+            position: absolute;
+            left: 5%;
+            top: 180%;
+            width: 100%;
+            height: 100%;
+        }
+        #test{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80%;
+            height: 80%;
+            box-shadow: 1px 1px 3px black;
+        }
+        #skill{
+            /* position: absolute; */
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 43.8%;
+            height: 100%;
+            box-shadow: 1px 1px 2px black;
+        }
+        #Skills{
+            position: absolute;
+            font-size: 50px;
+            text-align: left;
+            top: 10%;
+            left: 5%;
+            color: rgb(255, 187, 100);
+        }
+        #skill ul{
+            /* margin: 20px; */
+    
+            font-size: 40px;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 5%;
+            top:20%;
+        }
+        #progress{
+        
+            color: white;
+            margin: 60px auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 56.1%;
+            height: 100%;
+            /* background-color: aqua; */
+        }
+        #progress li{
+            padding: 30px;
+            list-style: none;
+            margin: 20px 0;
+        }
+        #progress li h3{
+            padding: 30px;
+
+        }
+        .bar{
+            background: #353b48;
+            display: block;
+            height: 2px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #2187e7b3;
+        }
+        .bar span{
+            height: 2px;
+            float: left;
+            background: #2187e7;
+        }
+        .html{
+            width: 75%;
+            animation: html 5s;
+        }
+        .css{
+            width: 80%;
+            animation: css 10s;
+        }
+        .photo{
+            width: 20%;
+            animation: photo 10s;
+        }
+        .js{
+            width: 90%;
+            animation: js 10s;
+        }
+        @keyframes html{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 75%;
+            }
+        }
+        @keyframes css{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 80%;
+            }
+        }
+        @keyframes photo{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 20%;
+            }
+        }
+        @keyframes js{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 90%;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div id="one">
+        <img src="https://i.ibb.co/s9TQLpP/face.jpg" id="mainfc">
+        <p id="name">Alikhan<br>Kuatov</p>
+        <p id="developer">Front-End Developer</p>
+    </div>
+    <div id="two">
+        <div id="info">
+            <img src="https://i.ibb.co/s9TQLpP/face.jpg" id="face">
+            <!-- <p>Начинающий веб разработчик.</p> -->
+            <p>Intermediate Front-end developer with 1 year of experience in coding,developing.</p>
+        </div>
+        <p id="about">About me</p>
+        <p class="about1">Full Name : Kuatov Alikhan<br>Phone :
+            8-777-600-86-76 <br>Email : Channelgamer58@gmail.com , Gamer.production@yandex.ru</p>  
+    </div>
+    <div id="three">
+        <div id="test">
+            <div id="skill">
+                <p id="Skills">Skills</p>
+                <ul>
+                    <li>Front-End Development</li>
+                    <!-- <li>Mathematical analysis</li> -->
+                    <li>Analytical mind</li>
+                </ul>
+            </div>
+            <div id="progress">
+                <li><h3>HTML5</h3><span class="bar"><span class="html"></span></span></li>
+                <li><h3>CSS3</h3><span class="bar"><span class="css"></span></span></li>
+                <li><h3>PHOTOSHOP</h3><span class="bar"><span class="photo"></span></span></li>
+                <li><h3>JAVASCRIPT</h3><span class="bar"><span class="js"></span></span></li>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
