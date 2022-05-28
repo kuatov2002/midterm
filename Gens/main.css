@@ -1,0 +1,85 @@
+.text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#back {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100vw;
+  height: auto;
+}
+#music {
+  width: 2vw;
+  position: fixed;
+  z-index: 1;
+  top: 0.75vw;
+  left: 1vw;
+}
+body {
+  overflow: hidden;
+  -webkit-user-select: none;
+  /* background-color:rgb(60, 195, 254); */
+}
+.buttons {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  background: #000000;
+  width: 100vw;
+  height: 4vw;
+  opacity: 0.5;
+  z-index: 1;
+}
+.main {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 12vw;
+  z-index: 1;
+  font-weight: bold;
+  color: white;
+}
+.main p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.fractions {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 21vw;
+  z-index: 1;
+  font-weight: bold;
+  color: white;
+}
+.fractions p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}
+.chars {
+  position: absolute;
+  width: 8vw;
+  height: 4vw;
+  left: 31vw;
+  z-index: 1;
+  font-weight: bold;
+  color: white;
+}
+.chars p {
+  position: absolute;
+  font-size: 2vw;
+  bottom: -1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+}

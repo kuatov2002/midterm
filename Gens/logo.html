@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+     // $("#cof1").fadeout();
+     function load(){
+      $("#cof").animate({opacity:1},1000);
+      $("#maintext").animate({opacity:1},1000);
+      $("#welcome").animate({opacity:1},1000);
+      $(".button").fadeOut(0);
+      $(".button").fadeIn(1000);
+      $("#icon").fadeOut(0);
+      $("#icon").fadeIn(1000);
+     }
+
+
+     function big(element){
+       element.style.fontSize="60px";
+       switch (element.innerHTML) {
+        case "Coffee":
+        document.getElementById
+        $("#san1").css("left","780px");
+        
+           break;
+         case "Order Online":
+         $("#san").css("left","500px");
+       
+       $("#san2").css("left","1140px");
+
+           break;
+       
+         case "About Us":
+         $("#san1").css("left","740px");
+       $("#san3").css("left","1460px");
+
+           break;
+           case "Contacts":
+           $("#san2").css("left","1100px");
+
+           break;
+         default:
+
+         break;
+       }
+     }
+     function small(element){
+       element.style.fontSize="40px";
+       $("#san").css("left","520px");
+       $("#san1").css("left","760px");
+       $("#san2").css("left","1120px");
+       $("#san3").css("left","1420px");
+     }
+     function change(element) {
+       switch (element.innerHTML) {
+        case "Coffee":
+         $(".png").animate({opacity:0},300);
+         $("#cof2").animate({opacity:1},300);
+         $(".welcome").animate({opacity:0},300);
+         $("#welcome1").animate({opacity:1},300);
+         $(".text").animate({opacity:0},300);
+         $("#maintext1").animate({opacity:1},300);
+           break;
+         case "Order Online":
+         $(".png").animate({opacity:0},300);
+         $("#cof1").animate({opacity:1},300);
+         $(".welcome").animate({opacity:0},300);
+         $("#welcome2").animate({opacity:1},300);
+         $(".text").animate({opacity:0},300);
+         $("#maintext2").animate({opacity:1},300);
+           break;
+       
+         case "About Us":
+         $(".png").animate({opacity:0},300);
+         $("#cof3").animate({opacity:1},300);
+         $(".welcome").animate({opacity:0},300);
+         $("#welcome3").animate({opacity:1},300);
+         $(".text").animate({opacity:0},300);
+         $("#maintext3").animate({opacity:1},300);
+           break;
+           case "Contacts":
+           $(".png").animate({opacity:0},300);
+         $("#cof4").animate({opacity:1},300);
+         $(".welcome").animate({opacity:0},300);
+         $("#welcome4").animate({opacity:1},300);
+         $(".text").animate({opacity:0},300);
+         $("#maintext4").animate({opacity:1},300);
+           break;
+         default:
+         $(".png").animate({opacity:0},300);
+         $("#cof").animate({opacity:1},300);
+         $(".welcome").animate({opacity:0},300);
+         $("#welcome").animate({opacity:1},300);
+         $(".text").animate({opacity:0},300);
+         $("#maintext").animate({opacity:1},300);
+         break;
+       } 
+     }
+    </script>
+   <link rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Coffee</title>
+  <style type="text/css">
+  .png{
+    opacity: 0;
+  }
+  body{
+    background-color: rgb(233,219,121);
+  }
+  .coffee{
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    opacity: 1;
+    
+  }
+  #icon{
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    filter: grayscale();
+  }
+  .button{
+    top: 0px;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(154, 52, 48);
+    /* transition-property: font-size 1s; */
+  }
+  .text{
+    opacity: 0;
+    position: absolute;
+    top: 550px;
+    left: 800px;
+    width: 900px;
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif
+    
+  }
+  .welcome{
+    opacity: 0;
+    width: 700px;
+    position: absolute;
+    top: 250px;
+    left: 800px;
+    font-size: 100px;
+    font-weight: bold;
+  }
+  </style> 
+ </head>
+ <body onload="load()">
+
+  <div id="maintext" class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur, dolor a feugiat sagittis, 
+    lacus arcu gravida libero, et venenatis dui arcu vitae dolor. Nullam quis egestas metus. Maecenas vel nunc in risus faucibus 
+    blandit quis non enim.</div>
+    <div id="maintext1" class="text">Quisque est augue, ultricies placerat consequat sit amet, tincidunt sit amet tortor. Pellentesque 
+      dapibus pulvinar tortor, id vehicula orci tempus quis. Fusce malesuada velit libero, sodales pulvinar metus posuere eget.</div>
+      <div id="maintext2" class="text">Aenean leo diam, feugiat id justo id, elementum fringilla sem. Duis in ante nec urna molestie 
+        dignissim eget sed turpis. Ut nec quam non orci blandit auctor. Nunc lacus diam, convallis sed lorem id, rhoncus tempor libero.</div>
+        <div id="maintext3" class="text">Proin rutrum feugiat purus, at posuere mi pellentesque et. In vel volutpat est, non bibendum lacus. 
+          Vestibulum sit amet gravida felis. Phasellus tempor dictum euismod. Suspendisse lectus nulla, vulputate vitae porttitor ac, viverra id quam.</div>
+          <div id="maintext4" class="text">Nam interdum dolor in velit tristique vestibulum. Etiam quis mi est. Ut ac fermentum purus. Fusce 
+            lobortis risus scelerisque libero sodales, quis porttitor nunc maximus. Aenean vehicula vel eros dictum mollis. Proin finibus hendrerit pellentesque.</div>
+    <div class="welcome" id="welcome">Welcome to our coffee shop!</div>
+    <div class="welcome" id="welcome1">Coffee</div>
+    <div class="welcome" id="welcome2">Order Online</div>
+    <div class="welcome" id="welcome3">About Us</div>
+    <div class="welcome" id="welcome4">Contacts</div>
+   <div class="button" style="left: 520px;"id="san"><p  onmouseover="big(this)" onmouseout="small(this)" onclick="change(this)">Coffee</p></div>
+   <div class="button" style="left: 760px;"id="san1"><p  onmouseover="big(this)" onmouseout="small(this)" onclick="change(this)">Order Online</p></div>
+   <div class="button" style="left: 1120px;"id="san2"><p  onmouseover="big(this)" onmouseout="small(this)" onclick="change(this)">About Us</p></div>
+   <div class="button" style="left: 1420px;"id="san3"><p  onmouseover="big(this)" onmouseout="small(this)" onclick="change(this)">Contacts</p></div>
+   <div id="icon" onclick="change(this)"> 
+     <img src="https://www.freepngimg.com/thumb/java/3-2-java-free-download-png-thumb.png"
+     width="100">  
+   </div>
+  <div class="coffee">
+   <img id="cof" class="png" src="https://furnaceacsolutions.com/wp-content/uploads/2017/09/26-2-coffee-png-hd.png"
+   width="600">
+   <img id="cof1" class="png"  src="pngwing.com.png"
+   width="600"  style="position: absolute; left: 0px;" >
+   <img id="cof2" class="png" src="Coffee-Beans-Shop-Packaging-PNG-daily-roasted-coffee-beans.png"
+   width="600"  style="position: absolute; left: 0px;" >
+   
+   <img id="cof3" class="png" src="starbucks-logo-png-transparent.png"
+   width="600" style="position: absolute; left: 0px;">
+   <img id="cof4" class="png" src="telefon.png"
+   width="600" style="position: absolute; left: 0px;">
+  </div> 
+
+  
+   
+
+ </body>
+</html>

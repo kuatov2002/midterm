@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        var plus1 = 0;
+        function plus() {
+            plus1++;
+        }
+        function load() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        var soundtrack = document.createElement("audio");
+        var mus = 0;
+
+        soundtrack.src = "turn.mp3";
+        soundtrack.loop = "true";
+        soundtrack.volume = 0.1;
+        // function musicbody(){
+        //     mus++;if(mus==1){
+        //     document.getElementById("music").src="musicon.png";
+        //     soundtrack.play();
+        //     }
+        // }   
+        function music(a) {
+
+            //$("#jean").animate({opacity:1},150);
+            mus++;
+            switch ($(a).attr("src")) {
+                case "musicoff.png":
+                    document.getElementById("music").src = "musicon.png";
+                    soundtrack.play();
+                    $("#monst").addClass('rotate90');
+                    ; break;
+                case "musicon.png":
+                    document.getElementById("music").src = "musicoff.png";
+                    soundtrack.pause(); break;
+                    $("#monst").addClass('rotate-90');
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+            }
+        }
+        function choose(element) {
+            // $(element).css('filter', 'contrast(1.2)');
+            // $(element).css('filter', 'brightness(1.2)');
+            // console.log($(element).attr("id"));
+            // switch (element) {
+            //     case "#mon":
+
+            //         break;
+
+            //     case "#li":
+            //         break;
+            // }
+        }
+        function chooseout(element) {
+            $(".city").css('filter', 'contrast(1)');
+            $(".city").css('filter', 'brightness(1)');
+            
+        }
+
+        var slide = document.getElementById('slide');
+        // window.onmousemove= function(e){
+
+        //     console.log($(".slide2").css('left').slice(0,3));
+        //     var x=e.clientX;
+        //     if (plus1%2==0) {
+        //         $("#slide").css('left',x+'px');
+        //     }
+        // }
+        $(window).scroll(function () {
+            console.log(pageYOffset)
+            if (pageYOffset == -1) {
+                window.scrollTo({
+                    top: 970,
+                    behavior: 'smooth'
+                })
+            }
+
+        });
+        function monbut() {
+            mond++
+            $("#monbut").css("z-index", 0)
+            $(".mond").css('z-index',3)
+            $("#slide").animate({ left: '100%' }, 500); $("#monbut").animate({ opacity: '0' }, 100);
+            $("#mainli").animate({ right: '-31.25vw' }, 150);
+            $("#libut").animate({ right: '-31.25vw' }, 100);
+            $("#mainmond").animate({ opacity: '0' }, 300);
+
+            setTimeout(function () {
+                $(".mond").animate({ opacity: 1 }, 200)
+                $(".text").animate({ opacity: '1' }, 300);
+                $(".slide.slide1 img").animate({ right: '0' }, 150);
+            }, 500);
+
+
+
+        }
+        function monbut1() {
+            $(".mond").css('z-index',0)
+            $("#monbut").css("z-index", 3)
+            $(".mond").animate({ opacity: 0 }, 200)
+            $("#slide").animate({ left: '50%' }, 500);
+            $("#mainli").animate({ right: '12.5vw' }, 450);
+            $("#libut").animate({ right: '21.875vw' }, 100);
+            $(".slide.slide1 img").animate({ right: '-3.65vw' }, 150);
+            $("#mainmond").animate({ opacity: '1' }, 300);
+            $(".slide.slide1 button").animate({ opacity: '1' }, 300);
+        }
+        function libut() {
+            $("#libut").css("z-index", 0)
+            $(".gavan").css('z-index',3)
+            $("#slide").animate({ left: '0%' }, 500);
+            $("#monbut").animate({ left: '-31.25vw' }, 150);
+            $("#mainmond").animate({ left: '-31.25vw' }, 200);
+            $("#mainli").animate({ opacity: '0' }, 300);
+            $("#libut").animate({ opacity: '0' }, 100);
+            setTimeout(function () {
+                $(".slide.slide2 img").animate({ left: '0' }, 150);
+                $(".gavan").animate({ opacity: 1 }, 200)
+            }, 500)
+        }
+        function libut1() {
+            $("#libut").css("z-index", 3)
+            $(".gavan").css('z-index',0)
+            $(".gavan").animate({ opacity: 0 }, 200)
+            $("#slide").animate({ left: '50%' }, 500);
+            $("#monbut").animate({ left: '17.7vw' }, 150);
+            $("#mainmond").animate({ left: '12.3vw' }, 400);
+            $(".slide.slide2 img").animate({ left: '-3.65vw' }, 150);
+            $("#mainli").animate({ opacity: '1' }, 300);
+            $("#libut").animate({ opacity: '1' }, 100);
+        }
+        var mond = 0;
+        var category = 0;
+        var izna;
+        var elem11;
+        function formond(elem) {
+            category++
+            if (category % 2 == 1) {
+                $("#left").css('z-index',2)
+                izna = $(elem).css('top')
+                // $("#left").css('z-index', 0)
+                $(elem).animate({ top: "5.21vw" }, 200)
+                $(elem).animate({ height: '26vw' }, 200)
+                $(elem).css('z-index', 3)
+                // $(elem).css('z-index', 6)
+                $(".mond").not(elem).animate({ opacity: 0 }, 200)
+                $(".mond").not(elem).css('z-index',0)
+                setTimeout(() => {
+                    $(elem).children('img').animate({opacity:1},200)
+                }, 200);
+            }
+            else {
+                // $("#left").css('z-index', 1)
+                $("#left").css('z-index', 4)
+                sver(elem)
+                $(elem).children('img').animate({opacity:0},200)
+            }
+
+        }
+        function sver(elem) {
+            $(elem).animate({ height: '5.21vw' }, 200)
+            $(elem).animate({ top: izna }, 200)
+            $(".mond").css('z-index', 3)
+            // $(".mond").css('z-index', 0)
+            setTimeout(() => {
+                $(".mond").not(elem).animate({ opacity: 1 }, 200)
+            }, 400);
+        }
+
+
+
+        function forli(elem) {
+            category++
+            if (category % 2 == 1) {
+                $("#right").css('z-index',2)
+                izna = $(elem).css('top')
+                $(elem).animate({ top: "5.21vw" }, 200)
+                $(elem).animate({ height: '26vw' }, 200)
+                $(elem).css('z-index', 3)
+                $(".gavan").not(elem).animate({ opacity: 0 }, 200)
+                $(".gavan").not(elem).css('z-index',0)
+                setTimeout(() => {
+                    $(elem).children('img').animate({opacity:1},200)
+                }, 200);
+            }
+            else {
+                $("#right").css('z-index', 4)
+                sver11(elem)
+                $(elem).children('img').animate({opacity:0},200)
+            }
+        }
+        function sver11(elem) {
+            $(elem).animate({ height: '5.21vw' }, 200)
+            $(elem).animate({ top: izna }, 200)
+            
+            $(".gavan").css('z-index', 3)
+            setTimeout(() => {
+                $(".gavan").not(elem).animate({ opacity: 1 }, 200)
+            }, 400);
+        }
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+        .buttons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #000000;
+            width: 100%;
+            height: 7.41vh;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        #characterimg {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+
+
+
+        #back {
+            position: relative;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -10;
+        }
+
+        #music {
+            position: fixed;
+            z-index: 1;
+            top: 0.78125vw;
+            left: 1.05vw;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* overflow: hidden; */
+            -webkit-user-select: none;
+            /* background-image: url("location.png"); */
+            /* background:greenyellow; */
+            overflow: hidden;
+        }
+
+
+        .city {
+
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #sities {
+            position: fixed;
+            right: 3.65vw;
+            bottom: 2.61vw;
+            width: 18.75vw;
+            height: 10.42vw;
+            background-color: rgba(255, 0, 0, 0);
+            /* opacity: 0.3; */
+        }
+
+        #sities img {
+            position: absolute;
+            width: 1.98vw;
+            border-radius: 0.52vw;
+            transform: rotate(0deg);
+        }
+
+        #list {
+            top: 4.6875vw;
+        }
+
+        #sities p {
+            margin-right: 3.90625;
+            margin-top: 1.67vw;
+            font-weight: bold;
+            font-size: 2.09vw;
+            color: rgb(0, 0, 0);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .container .slide.slide1 {
+            background: url("mondstadt1.jpg") no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .container .slide.slide2 {
+            background: url("liyue.png") no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            left: 50%;
+        }
+
+        #left{
+            z-index: 4;
+            position: absolute;
+            right: -3.65vw;
+            top: 50%;
+        }
+
+        #right{
+            z-index: 4;
+            position: fixed;
+            left: -3.65vw;
+            top: 50%;
+        }
+
+        .mond {
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, rgba(39, 46, 59, 0.4), rgba(28, 37, 52, 0.4));
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 5.2vw;
+        }
+
+        #ozero {
+            top: 5.2vw;
+        }
+
+        #sokol {
+            top: 13.03vw;
+        }
+
+        #vera {
+            top: 20.84vw;
+        }
+
+        #vino {
+            top: 28.65vw;
+        }
+
+        #spring {
+            top: 36.46vw;
+        }
+
+        #hram {
+            top: 44.28vw;
+        }
+
+        .gavan {
+            background: linear-gradient(to bottom, rgba(251, 255, 0, 0.4), rgba(221, 118, 0, 0.4));
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 5.2vw;
+            overflow: hidden;
+        }
+
+        #port {
+            top: 9.12vw;
+            
+        }
+
+        #gora {
+            top: 16.93vw;
+        }
+
+        #ostrov {
+            top: 24.74vw;
+        }
+
+        #cin {
+            top: 32.56vw;
+        }
+
+        #predel {
+            top: 40.37vw;
+        }
+
+        .text {
+            margin: 0;
+            font-size: 4.17vw;
+            font-weight: bold;
+            color: white;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+        }
+
+        .text1 {
+            text-align: right;
+            margin: 0;
+            font-size: 4.17vw;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            right: 2.61vw;
+            top: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+        }
+
+        .mondimg {
+            position: absolute;
+            left: 0;
+            height: 18.49vw;
+        }
+
+        .mondtext {
+            position: absolute;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-size: 1.5625vw;
+            margin-left: 36.46vw;
+            top: 3.39vw;
+        }
+
+        .liimg {
+            position: absolute;
+            top: 0;
+            
+            left: 0;
+            height: 18.49vw;
+            opacity: 0;
+        }
+        .litext{
+            position: absolute;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 0.1vw 0.2vw 0.15625vw rgba(0, 0, 0, 0.3);
+            font-size: 1.5625vw;
+            margin-left: 36.46vw;
+            top: 3.39vw;
+        }
+        #skri{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 4vw;
+            z-index: 1;
+            background: rgba(255, 0, 0, 0);
+        }
+    </style>
+
+</head>
+
+<body onload="load()" onclick="plus()">
+
+    <!-- <img id="back" src="location.png"> -->
+    <div class="container">
+        <div class="slide slide1">
+            <p id="mainmond">Мондштадт</p>
+            <button id="monbut" onclick="monbut()">Узнать больше</button>
+            <img src="levo.png" onclick="monbut1()" id="left">
+            <div id="ozero" class="mond" onclick="formond(this)">
+                <p id="ozerotext" class="text">Сидровое Озеро</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311461397057.jpg" class="mondimg"
+                    style="top: 5.21vw;">
+                <p class="mondtext">Природное пресноводное озеро, окружающее Мондштадт.
+                    Кристально чистая вода Сидрового озера сохранила первородную чистоту, а его волны продолжают
+                    блестеть уже на протяжении многих тысячелетий. Сладковатый привкус озёрной воды прославил
+                    произведённый в Мондштадте алкоголь на весь Тейват и фактически стал символом города.</p>
+            </div>
+            <div id="sokol" class="mond" onclick="formond(this)">
+                <p id="sokoltext" class="text">Побережье Сокола</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311462187517.jpg" class="mondimg"
+                    style="top: 5.21vw;">
+                <p class="mondtext">Тянущееся от самой Равнины Бризов Побережье Сокола вместе с Мысом Веры окружают с
+                    трёх сторон залив к востоку от Мондштадта.
+                    Из-за своей протяжённости и мелководных пляжей Побережье Сокола является популярным местом для
+                    отдыха мондштадтцев. Иногда в небе можно заметить пролетающего сокола.</p>
+            </div>
+            <div id="vera" class="mond" onclick="formond(this)">
+                <p id="veratext" class="text">Мыс Веры</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311463354982.jpg" class="mondimg"
+                    style="top: 5.21vw;">
+                <p class="mondtext">Мыс Веры находится на юго-востоке от Мондштадта, где холмы Песни ветра встречаются с
+                    морем.
+                    Легенда гласит, что некая влюблённая пара поклялась друг другу в верности, но оставила после себя
+                    лишь трогательную романтичную историю. Мыс Веры до сих пор считается лучшим местом для свиданий и
+                    признаний в любви.
+                    С вершины мыса можно наслаждаться не только восходами и закатами, но также и открывающимся
+                    живописным видом на Равнину Бризов.</p>
+            </div>
+            <div id="vino" class="mond" onclick="formond(this)">
+                <p id="vinotext" class="text">Винокурня «Рассвет»</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200319/2020031910130187113.png" alt=""
+                    class="mondimg" style="top: 5.21vw;">
+                <p class="mondtext">Винокурня «Рассвет» находится к юго-западу от Мондштадта. Секреты производства
+                    лучшего мондштадтского вина передаются от отца к сыну.
+                    Из выращенного здесь винограда производят различные сорта вин, которые популярны по всему
+                    континенту.
+                    Каждый год лишь малая часть вина остаётся в Мондштадте. Большая же часть уходит на продажу с купцами
+                    по южным торговым маршрутам.</p>
+            </div>
+            <div id="spring" class="mond" onclick="formond(this)">
+                <p id="springtext" class="text">Спрингвейл</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311473147933.jpg" alt=""
+                    class="mondimg" style="top: 5.21vw;">
+                <p class="mondtext">Беззаботная деревушка Спрингвейл расположилась вдоль озера на юге Мондштадта.
+                    Большинство жителей деревни круглый год занимаются охотой и поставляют мясо в рестораны Мондштадта.
+                    Сельская атмосфера и дикая природа Спрингвейла привлекают туристов. Если вам во время визита сюда
+                    посчастливится встретить одного легендарного мясного шеф-повара, я гарантирую, вы не покинете
+                    Спрингвейл неудовлетворённым.</p>
+            </div>
+            <div id="hram" class="mond" onclick="formond(this)">
+                <p id="hramtext" class="text">Храм Тысячи Ветров</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311494677355.jpg" alt=""
+                    class="mondimg" style="top: 5.21vw;">
+                <p class="mondtext">Руины древнего храма, расположенные к северо-востоку от Мондштадта.
+                    По слухам, тысячу лет назад здесь был храм, посвящённый древнему богу ветра, но сейчас он стоит
+                    разрушен и опустошён. На каменных колоннах внутри храма видны некогда богато украшенные барельефы.
+                    На каменных скульптурах, увенчанных давно забытыми символами, высечена древняя пословица: «Только
+                    время даёт прорасти семени истории, принесённым ветром».</p>
+            </div>
+        </div>
+        <div class="slide slide2" id="slide">
+            <p id="mainli">Гавань Ли Юэ</p>
+            <button id="libut" onclick="libut()">Узнать больше</button>
+            <img src="pravo.png" onclick="libut1()" id="right">
+            <div id="port" class="gavan" onclick="forli(this)">
+                <p id="porttext" class="text1">Порт</p>
+                <p class="litext">Строительство порта положило начало морской торговли Ли Юэ. Товарооборот этого крупнейшего торгового узла Тейвата не сравним ни с какими другими портами на континенте.
+                    Если будете в Ли Юэ во время ежегодного праздника морских фонарей, ни в коем случае не забудьте посетить портовый район после заката. Больше нигде на континенте вы не сможете насладиться столь захватывающим зрелищем – тысячами фонарей, запущенных в ночное небо.</p>
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200319/2020031910400027780.png" alt="" class="liimg" style="top: 5.21vw;">
+            </div>
+            <div id="gora" class="gavan" onclick="forli(this)">
+                <p id="goratext" class="text1">Горы Тяньхэн</p>
+                <img src="https://uploadstatic-sea.mihoyo.com/contentweb/20200329/2020032920171799614.jpg" alt="" class="liimg" style="top: 5.21vw;">
+                <p class="litext">Горный массив к западу от Ли Юэ на протяжении многих веков служит городу естественной защитой от неприятелей.
+                    Здесь повсюду встречаются руины крепостных стен и оборонительных сооружений.
+                    Также в этом месте производилась первая в Ли Юэ добыча руды.</p>
+            </div>
+            <div id="ostrov" class="gavan" onclick="forli(this)">
+                <p id="ostrovtext" class="text1">Тростниковые острова</p>
+                <img src="https://uploadstatic-sea.mihoyo.com/contentweb/20200329/2020032920172298018.jpg" alt="" class="liimg" style="top: 5.21vw;">
+                <p class="litext">К северу от Ли Юэ широко раскинулись заросли тростника, давшие название этому месту.
+                    Заболоченная местность со своей уникальной флорой и фауной привлекает мимо проходящих путешественников.
+                    Через Тростниковые поля проходит важный торговый путь, поэтому здесь нередко можно встретить купеческие караваны. Передохнуть путешественники останавливаются на постоялом дворе «Ван Шу».</p>
+            </div>
+            <div id="cin" class="gavan" onclick="forli(this)">
+                <p id="cintext" class="text1">Деревня Цин Цэ</p>
+                <img src="https://uploadstatic-sea.mihoyo.com/contentweb/20200329/2020032920165081691.jpg" alt="" class="liimg" style="top: 5.21vw;">
+                <p class="litext">Меж холмов и бамбуковых лесов к северу от Ли Юэ притаилась крохотная деревня Цин Цэ.
+                    Долины, утопающие в облаках, усеяны полями в форме полумесяца, по которым порывы горного ветра гоняют разноцветные волны.
+                    Жители деревни ведут простую и неприхотливую жизнь.</p>
+            </div>
+            <div id="predel" class="gavan" onclick="forli(this)">
+                <p id="predeltext" class="text1">Заоблачный предел</p>
+                <img src="https://uploadstatic-sea.mihoyo.com/contentweb/20200329/2020032920164582753.jpg" alt="" class="liimg" style="top: 5.21vw;">
+                <p class="litext">Скалистая местность к северо-западу от Ли Юэ, круглый год покрытая облаками и туманом.
+                    С этих вершин открывается шикарный вид, но из-за сложных маршрутов и отсутствия тропинок, мало кому удаётся им насладиться. Ходят слухи, что здесь находится убежище Адептов. Многие люди обращаются к ним в надежде обрести бессмертие.
+                    Этот прекрасный пейзаж таит множество опасностей. Лучше наслаждаться восхитительным видом с постоялого двора «Ван Шу».</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="buttons">
+        
+    </div>
+
+    <a href="main.html"><div class="main" >
+        <p>Главная</p>
+    </div></a>
+    <a href="locations.html"><div class="fractions">
+        <p>Фракции</p>
+    </div></a>
+    <a href="characters for mobile.html"><div class="chars">
+        <p>Персонажи</p>
+    </div></a>
+    <div id="skri"></div>
+</body>
+
+</html>
